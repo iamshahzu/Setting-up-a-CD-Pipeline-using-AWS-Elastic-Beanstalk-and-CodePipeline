@@ -8,8 +8,8 @@ router = APIRouter(prefix="/items", tags=["items"])
 class Item:
     id: int
     name: str
-    description: Optional[str] = None
     price: float
+    description: Optional[str] = None
 
 # Sample data
 items_db: List[Item] = []
