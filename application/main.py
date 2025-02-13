@@ -15,14 +15,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-os.makedirs("static", exist_ok=True)
-
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
-# Create the 'templates' directory if it doesn't exist
-# Get the absolute path to the application directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "application", "templates"))
+APPLICATION_DIR = os.path.join(BASE_DIR, "application")
+
+# Set up templates and static files
+templates = Jinja2Templates(
+    directory=os.path.join(APPLICATION_DIR, "templates"))
+app.mount("/static", StaticFiles(directory=os.path.join(APPLICATION_DIR,
+          "static")), name="static")
+
 
 app.include_router(items.router)
 
