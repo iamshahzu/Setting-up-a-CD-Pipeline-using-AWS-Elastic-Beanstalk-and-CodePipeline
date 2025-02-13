@@ -20,10 +20,9 @@ os.makedirs("static", exist_ok=True)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Create the 'templates' directory if it doesn't exist
-os.makedirs("templates", exist_ok=True)
-
-# Set up templates
-templates = Jinja2Templates(directory="templates")
+# Get the absolute path to the application directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "application", "templates"))
 
 app.include_router(items.router)
 
