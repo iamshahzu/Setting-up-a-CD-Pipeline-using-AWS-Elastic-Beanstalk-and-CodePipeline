@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS CodePipeline with Elastic Beanstalk Tutorial</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#setup">Setup Guide</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#bestpractices">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>AWS CodePipeline with Elastic Beanstalk</h1>
+            <p>Learn how to implement continuous delivery using AWS CodePipeline and Elastic Beanstalk</p>
+        </section>
+
+        <section id="overview" class="content-section">
+            <h2>Overview</h2>
+            <div class="card">
+                <p>AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application updates. Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications.</p>
+                <div class="workflow">
+                    <div class="step">Source</div>
+                    <div class="arrow">→</div>
+                    <div class="step">Build</div>
+                    <div class="arrow">→</div>
+                    <div class="step">Test</div>
+                    <div class="arrow">→</div>
+                    <div class="step">Deploy</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup" class="content-section">
+            <h2>Setup Guide</h2>
+            <div class="card">
+                <h3>Prerequisites</h3>
+                <ul>
+                    <li>AWS Account</li>
+                    <li>Source code repository (GitHub/CodeCommit)</li>
+                    <li>Application code ready for deployment</li>
+                </ul>
+
+                <h3>Step-by-Step Setup</h3>
+                <ol>
+                    <li>
+                        <h4>Create Elastic Beanstalk Environment</h4>
+                        <p>Set up your application environment with the desired configuration</p>
+                    </li>
+                    <li>
+                        <h4>Configure Source Stage</h4>
+                        <p>Connect your source repository to CodePipeline</p>
+                    </li>
+                    <li>
+                        <h4>Set up Build Stage</h4>
+                        <p>Configure build specifications and environment</p>
+                    </li>
+                    <li>
+                        <h4>Configure Deploy Stage</h4>
+                        <p>Connect Elastic Beanstalk as deployment target</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="benefits" class="content-section">
+            <h2>Benefits</h2>
+            <div class="card">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Automated Workflow</h4>
+                        <p>Streamline your deployment process with automated pipelines</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Consistency</h4>
+                        <p>Ensure consistent deployments across environments</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Scalability</h4>
+                        <p>Easily scale your applications with Elastic Beanstalk</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Visibility</h4>
+                        <p>Monitor and track deployment status and history</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bestpractices" class="content-section">
+            <h2>Best Practices</h2>
+            <div class="card">
+                <ul class="best-practices">
+                    <li>Use separate environments for staging and production</li>
+                    <li>Implement proper testing stages before deployment</li>
+                    <li>Maintain version control best practices</li>
+                    <li>Configure appropriate monitoring and alerts</li>
+                    <li>Regular backup and disaster recovery planning</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Learn more about AWS services at <a href="https://aws.amazon.com">aws.amazon.com</a></p>
+    </footer>
+</body>
+</html>
