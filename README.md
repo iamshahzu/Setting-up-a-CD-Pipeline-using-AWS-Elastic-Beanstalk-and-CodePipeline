@@ -25,7 +25,7 @@ This project demonstrates an automated deployment setup where code from a public
 - **Cloud Provider:** AWS
 - **Deployment Platform:** Elastic Beanstalk
 - **CI/CD Automation:** CodePipeline
-- **Version Control:** GitHub (public repository)
+- **Version Control:** GitHub (public repository.)
 
 ## Setup & Deployment
 
